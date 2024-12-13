@@ -14,8 +14,8 @@ Route::post('/new-gift-type', [GiftTypeController::class, 'create'])->name('gift
 
 Route::get('/gift_types', [GiftTypeController::class, 'list'])->name('gift_types.list');
 
-Route::get('/new-user', [GiftTypeController::class, 'index'])->name('');
-Route::post('/new-user', [GiftTypeController::class, 'create'])->name('');
+Route::get('/new-user', [GiftTypeController::class, 'index'])->name('users.index');
+Route::post('/new-user', [GiftTypeController::class, 'create'])->name('users.create');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
