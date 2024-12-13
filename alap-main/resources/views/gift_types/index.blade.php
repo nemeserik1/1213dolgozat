@@ -8,7 +8,7 @@
 <body>
     <h1>Gift Types:</h1>
     @foreach ($types as $type)
-        {{$type->type}}
+        {{$type->type}} <br>
     @endforeach
 </body>
 </html>
