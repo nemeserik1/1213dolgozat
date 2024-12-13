@@ -13,7 +13,7 @@ class GiftTypeController extends Controller
 
     public function create(Request $request){
         $request->validate(
-            ['type_name' => 'required|string'],
+            ['type' => 'required|string'],
         );
 
         GiftType::create($request->all());
