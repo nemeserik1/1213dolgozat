@@ -13,7 +13,8 @@ class PersonController extends Controller
 
     public function create(Request $request){
         $request->validate(
-            ['type' => 'required|string'],
+            ['person_name' => 'required|string'],
+            ['email' => 'required|string'],
         );
 
         User::create($request->all());
