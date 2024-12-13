@@ -6,6 +6,18 @@
     <title>new users</title>
 </head>
 <body>
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+
+    @if (session('success'))    
+        <p>{{session('success')}}</p>   
+    @endif
     <h1>Add New Users</h1>
+
 </body>
 </html>
