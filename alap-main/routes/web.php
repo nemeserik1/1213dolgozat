@@ -12,7 +12,7 @@ Route::get('/', function () {
 Route::get('/new-gift-type', [GiftTypeController::class, 'index'])->name('gift_types.index');
 Route::post('/new-gift-type', [GiftTypeController::class, 'create'])->name('gift_types.create');
 
-Route::get('/gift_types', [GiftTypeController::class, 'index'])->name('gift_types.index');
+Route::get('/gift_types', [GiftTypeController::class, 'list'])->name('gift_types.list');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

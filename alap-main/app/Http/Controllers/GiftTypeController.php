@@ -19,4 +19,10 @@ class GiftTypeController extends Controller
         GiftType::create($request->all());
         return redirect()->back()->with('success', 'Gift type stored.');
     }
+
+    public function list(){
+        $types = GiftType::all();
+        return view('gift_types.index', compact('types'));
+    }
+
 }
