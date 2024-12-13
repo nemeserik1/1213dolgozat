@@ -12,6 +12,8 @@ Route::get('/', function () {
 Route::get('/new-gift-type', [GiftTypeController::class, 'index'])->name('gift_types.index');
 Route::post('/new-gift-type', [GiftTypeController::class, 'create'])->name('gift_types.create');
 
+Route::get('/gift_types', [GiftTypeController::class, 'index'])->name('gift_types.index');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
