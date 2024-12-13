@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GiftTypeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -7,9 +8,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/new-gift-type', function () {
-    return view('gift_types.create');
-});
+
+Route::get('/new-gift-type', [GiftTypeController::class, 'index'])->name('gift_types.index');
+Route::get('/new-gift-type', [GiftTypeController::class, 'create'])->name('gift_types.create');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
