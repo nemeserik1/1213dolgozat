@@ -18,6 +18,11 @@
         <p>{{session('success')}}</p>   
     @endif
     <h1>Add New Users</h1>
-
+    <form action="{{route('users.create')}}" method="POST">
+        @csrf
+        <input type="text" name="person_name" id="person_name">
+        <input type="text" name="email" id="email">
+        <input type="submit" value="Add user">
+    </form>
 </body>
 </html>
