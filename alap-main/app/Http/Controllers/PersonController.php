@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\People;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
@@ -17,7 +18,7 @@ class PersonController extends Controller
             ['email' => 'required|string'],
         );
 
-        User::create($request->all());
+        People::create($request->all());
         return redirect()->back()->with('success', 'User stored.');
     }
 }
